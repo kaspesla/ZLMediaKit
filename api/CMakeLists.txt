@@ -1,8 +1,8 @@
-﻿include_directories(include source)
+include_directories(include source)
 
 file(GLOB api_src_list include/*.h source/*.cpp source/*.h source/*.c)
 
-set(ENABLE_API_STATIC false)
+set(ENABLE_API_STATIC true)
 
 if (IOS)
     add_library(mk_api STATIC ${api_src_list})
